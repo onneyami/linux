@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Бесконечный цикл ожидания ввода
+# Infinite loop waiting for input
 while true; do
     read a b
 
-    # Проверка на пустую строку
+    # Check for empty input
     if [[ -z "$a" && -z "$b" ]]; then
         echo "bye"
         break
     fi
 
-    # Проверка, что оба значения — положительные целые числа
+    # Check that both values are positive integers
     if ! [[ "$a" =~ ^[1-9][0-9]*$ && "$b" =~ ^[1-9][0-9]*$ ]]; then
-        echo "Введите два натуральных числа"
+        echo "Please enter two natural numbers"
         continue
     fi
 
-    # Вычисление НОД с помощью алгоритма Евклида
+    # Calculate GCD using Euclidean algorithm
     x=$a
     y=$b
     while [[ "$y" -ne 0 ]]; do
