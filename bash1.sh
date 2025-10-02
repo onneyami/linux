@@ -1,21 +1,21 @@
 #!/bin/bash
 
-# Подсказка по использованию
+# Usage hint
 if [[ "$1" == "--help" ]]; then
-    echo "Использование: $0 <число студентов>"
-    echo "Пример: $0 3"
+    echo "Usage: $0 <number of students>"
+    echo "Example: $0 3"
     exit 0
 fi
 
-# Проверка, что введено неотрицательное целое число
+# Check that a non-negative integer is entered
 if ! [[ "$1" =~ ^[0-9]+$ ]]; then
-    echo "Ошибка: введите неотрицательное целое число"
+    echo "Error: please enter a non-negative integer"
     exit 1
 fi
 
 var1=$1
 
-# Обработка значения через case
+# Process the value using case
 case "$var1" in
   0)
     echo "No students"
