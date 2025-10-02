@@ -8,13 +8,13 @@ while true; do
         break
     fi
 
-    # Проверка на три аргумента
+    # Check for three arguments
     if [[ -z "$a" || -z "$op" || -z "$b" ]]; then
         echo "error"
         exit 1
     fi
 
-    # Проверка, что a и b — целые числа
+    # Check that a and b are integers
     if ! [[ "$a" =~ ^-?[0-9]+$ && "$b" =~ ^-?[0-9]+$ ]]; then
         echo "error"
         exit 1
