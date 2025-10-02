@@ -7,12 +7,12 @@ while [[ $stdout != 1 ]]
         echo "enter your name: "
         read name
     if [[ (-z $name) || ($name = 0) ]] ;then 
-        echo "bye"      #если строка пуста, либо равна 0,то
+        echo "bye"      # if the string is empty or equals 0
         stdout=1
-    elif [[ -n $name ]]; then   #если строка не пуста
+    elif [[ -n $name ]]; then   # if the string is not empty
         while [[ $stdout != 1 ]] ;do     
             echo "enter your age: " 
-            read age     #принимаем значение
+            read age     # read the value
             if [[ ($age -eq 0) || (-z $age) ]] ;then
                 echo "bye"
                 stdout=1
@@ -24,4 +24,4 @@ while [[ $stdout != 1 ]]
                     echo "$name, your group is youth" ;fi
             fi ;break
         done ;fi
-done  
+done
